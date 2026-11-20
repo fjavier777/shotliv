@@ -2,6 +2,7 @@
 
 **Test type:** Manual functional testing  
 **Platform:** Google Chrome  
+**Test date:** November 20, 2026  
 **Result:** Passed
 
 ## 1. Extension Installation
@@ -16,6 +17,8 @@
 - [x] PNG image loading.
 - [x] WebP image loading.
 - [x] Original image preview displayed correctly.
+- [x] Multiple image selections during the same session.
+- [x] Repeated image replacement.
 
 ## 3. Image Editing
 
@@ -25,22 +28,27 @@
 - [x] Combined adjustments.
 - [x] Original and enhanced image comparison.
 - [x] Reset adjustments.
+- [x] Screen clearing and subsequent image loading.
+- [x] Adjustment controls reset correctly when loading a new image.
 
 ## 4. Image Export
 
 - [x] Download action works.
 - [x] Exported PNG file is valid.
 - [x] Original source file remains unchanged.
+- [x] Downloads work after replacing images multiple times.
 
 ## 5. Overall Result
 
-All core MVP workflows were manually tested in Chrome and worked as expected.
+All core MVP workflows were manually tested in Chrome, including repeated image loading, editing, replacement, and export.
+
+All tested operations worked as expected.
 
 **Validation status:** Initial MVP functional validation passed.
 
 ## 6. Scope of This Report
 
-This report records the initial manual functional test. It does not represent automated testing, cross-browser validation, performance benchmarking, or formal security auditing.
+This report records manual functional testing. It does not represent automated testing, cross-browser validation, performance benchmarking, or formal security auditing.
 
 ---
 
