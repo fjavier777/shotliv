@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Shotliv",
+  "version": "0.1.0",
+  "description": "Enhance images directly in your browser.",
+  "action": {
+    "default_title": "Open Shotliv"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
