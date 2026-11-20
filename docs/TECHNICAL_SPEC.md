@@ -55,7 +55,16 @@ The implementation must validate selected files and handle unsupported or unread
 
 Temporary object URLs must be released when no longer needed.
 
-The export implementation must produce a valid image file without modifying or overwriting the original source.
+The export implementation must:
+
+- Support PNG, WebP, and JPEG output formats.
+- Use PNG as the default export format for lossless quality.
+- Allow users to select WebP for smaller file sizes.
+- Allow users to select JPEG for compatibility.
+- Apply a high-quality setting when exporting lossy formats.
+- Handle transparency with a white background when exporting JPEG.
+- Preserve the original source without modifying or overwriting it.
+- Use the correct file extension for the exported format.
 
 ## 5. Privacy and Permissions
 
