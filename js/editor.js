@@ -18,6 +18,7 @@ const saturationValue = document.getElementById("saturation-value");
 
 const resetButton = document.getElementById("reset-button");
 const downloadButton = document.getElementById("download-button");
+const outputFormat = document.getElementById("output-format");
 
 const DEFAULT_ADJUSTMENT = 100;
 const SUPPORTED_TYPES = ["image/jpeg", "image/png", "image/webp"];
@@ -32,6 +33,7 @@ function setControlsEnabled(enabled) {
   saturationInput.disabled = !enabled;
   resetButton.disabled = !enabled;
   downloadButton.disabled = !enabled;
+  outputFormat.disabled = !enabled;
 }
 
 function updateAdjustmentLabels() {
@@ -126,17 +128,40 @@ function loadImage(file) {
 function downloadImage() {
   if (!originalImage) return;
 
-  canvas.toBlob((blob) => {
+  const format = outputFormat.value;
+  const extensions = {
+    "image/png": "png",
+    "image/webp": "webp",
+    "image/jpeg": "jpg"
+  };
+
+  let exportCanvas = canvas;
+
+  if (format === "image/jpeg") {
+    exportCanvas = document.createElement("canvas");
+    exportCanvas.width = canvas.width;
+    exportCanvas.height = canvas.height;
+
+    const exportContext = exportCanvas.getContext("2d");
+    exportContext.fillStyle = "#ffffff";
+    exportContext.fillRect(0, 0, exportCanvas.width, exportCanvas.height);
+    exportContext.drawImage(canvas, 0, 0);
+  }
+
+  const quality = format === "image/png" ? undefined : 0.92;
+
+  exportCanvas.toBlob((blob) => {
     if (!blob) {
       statusMessage.textContent = "Unable to export the image. Please try again.";
       return;
     }
 
+    const extension = extensions[blob.type] || extensions[format];
     const downloadUrl = URL.createObjectURL(blob);
     const link = document.createElement("a");
 
     link.href = downloadUrl;
-    link.download = `${originalFileName}-enhanced.png`;
+    link.download = `${originalFileName}-enhanced.${extension}`;
 
     document.body.appendChild(link);
     link.click();
@@ -147,7 +172,7 @@ function downloadImage() {
     }, 1000);
 
     statusMessage.textContent = "Your enhanced image has been downloaded.";
-  }, "image/png");
+  }, format, quality);
 }
 
 imageInput.addEventListener("change", (event) => {
