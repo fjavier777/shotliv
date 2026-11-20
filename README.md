@@ -13,6 +13,18 @@ The product is being developed with a **Chrome extension first** approach, with 
 - Keep the product simple and easy to use.
 - Evolve based on feedback, experimentation, and validated needs.
 
+## MVP Preview
+
+The initial MVP allows users to load images, adjust visual properties, compare results, and download enhanced images directly in the browser.
+
+| Editor | Original image |
+|---|---|
+| ![Shotliv editor](docs/screenshots/editor-empty.png) | ![Original image preview](docs/screenshots/editor-original.webp) |
+
+| Enhanced image | Editing adjustments |
+|---|---|
+| ![Enhanced image preview](docs/screenshots/editor-enhanced.png) | ![Image adjustment controls](docs/screenshots/editor-adjustments.png) |
+
 ## Development
 
 Shotliv is being built in public. This repository is the home for its source code, documentation, and development progress.
