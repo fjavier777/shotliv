@@ -122,6 +122,7 @@ function loadImage(file) {
   image.src = currentObjectUrl;
 }
 
+
 function downloadImage() {
   if (!originalImage) return;
 
@@ -137,9 +138,14 @@ function downloadImage() {
     link.href = downloadUrl;
     link.download = `${originalFileName}-enhanced.png`;
 
+    document.body.appendChild(link);
     link.click();
+    link.remove();
 
-    URL.revokeObjectURL(downloadUrl);
+    window.setTimeout(() => {
+      URL.revokeObjectURL(downloadUrl);
+    }, 1000);
+
     statusMessage.textContent = "Your enhanced image has been downloaded.";
   }, "image/png");
 }
