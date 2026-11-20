@@ -33,8 +33,12 @@
 
 ## 4. Image Export
 
-- [x] Download action works.
-- [x] Exported PNG file is valid.
+- [x] PNG export.
+- [ ] WebP export.
+- [ ] JPEG export.
+- [ ] PNG selected as the default output format.
+- [ ] Correct file extension for each exported format.
+- [ ] JPEG transparency handled with a white background.
 - [x] Original source file remains unchanged.
 - [x] Downloads work after replacing images multiple times.
 
