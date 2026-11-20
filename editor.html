@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Enhance your images directly in your browser with Shotliv.">
+  <title>Shotliv — Image Editor</title>
+  <link rel="stylesheet" href="css/editor.css">
+  <script src="js/editor.js" defer></script>
+</head>
+<body>
+  <header class="app-header">
+    <h1>Shotliv</h1>
+    <p>Make every image better.</p>
+  </header>
+
+  <main class="editor">
+    <section class="upload-section">
+      <label for="image-input">Select an image</label>
+      <input
+        type="file"
+        id="image-input"
+        accept="image/jpeg,image/png,image/webp"
+      >
+      <p id="status-message" role="status" aria-live="polite">
+        Choose an image to get started.
+      </p>
+    </section>
+
+    <section class="preview-section" aria-label="Image previews">
+      <div class="preview-panel">
+        <h2>Original</h2>
+        <div class="image-container">
+          <img id="original-preview" alt="Original image preview" hidden>
+          <p id="original-placeholder">Your original image will appear here.</p>
+        </div>
+      </div>
+
+      <div class="preview-panel">
+        <h2>Enhanced</h2>
+        <div class="image-container">
+          <canvas id="edited-preview" aria-label="Enhanced image preview"></canvas>
+          <p id="edited-placeholder">Your enhanced image will appear here.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="controls-section">
+      <h2>Adjustments</h2>
+
+      <div class="control-group">
+        <label for="brightness">Brightness</label>
+        <input
+          type="range"
+          id="brightness"
+          min="0"
+          max="200"
+          value="100"
+          disabled
+        >
+        <output id="brightness-value" for="brightness">100%</output>
+      </div>
+
+      <div class="control-group">
+        <label for="contrast">Contrast</label>
+        <input
+          type="range"
+          id="contrast"
+          min="0"
+          max="200"
+          value="100"
+          disabled
+        >
+        <output id="contrast-value" for="contrast">100%</output>
+      </div>
+
+      <div class="control-group">
+        <label for="saturation">Saturation</label>
+        <input
+          type="range"
+          id="saturation"
+          min="0"
+          max="200"
+          value="100"
+          disabled
+        >
+        <output id="saturation-value" for="saturation">100%</output>
+      </div>
+
+      <div class="action-buttons">
+        <button id="reset-button" type="button" disabled>
+          Reset adjustments
+        </button>
+        <button id="download-button" type="button" disabled>
+          Download image
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>Shotliv — Build. Experiment. Evolve.</p>
+  </footer>
+</body>
+</html>
