@@ -40,6 +40,7 @@
 - [ ] Correct file extension for each exported format.
 - [ ] JPEG transparency handled with a white background.
 - [x] Original source file remains unchanged.
+- [x] Exported filenames use the `[SH]` prefix and preserve the original filename.
 - [x] Downloads work after replacing images multiple times.
 
 ## 5. Overall Result
