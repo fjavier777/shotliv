@@ -43,8 +43,13 @@ The MVP must work independently, without requiring an account, cloud storage, or
 - Restore all adjustment controls to their initial values.
 
 ### FR-06 — Download
-- Export the edited image as a valid image file.
-- Preserve the applied adjustments.
+- Export the edited image as PNG, WebP, or JPEG.
+- Use PNG as the default output format.
+- Allow users to select the output format.
+- Preserve applied image adjustments.
+- Preserve transparency in PNG and WebP exports.
+- Replace transparent areas with a white background in JPEG exports.
+- Prefix exported filenames with `[SH]` while preserving the original filename.
 - Never overwrite the original file.
 
 ## 4. Privacy Principles
@@ -75,7 +80,11 @@ The MVP is ready for initial release when users can:
 - Adjust brightness, contrast, and saturation.
 - Compare original and edited versions.
 - Reset adjustments.
-- Download the edited result.
+- Export images in PNG, WebP, and JPEG formats.
+- Use PNG as the default export format.
+- Preserve transparency in PNG and WebP exports.
+- Export JPEG images with a white background when transparency is present.
+- Download files using the `[SH]` filename prefix.
 
 All core functionality must work in Chrome, with image processing performed locally.
 
