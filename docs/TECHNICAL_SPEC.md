@@ -65,6 +65,7 @@ The export implementation must:
 - Handle transparency with a white background when exporting JPEG.
 - Preserve the original source without modifying or overwriting it.
 - Use the correct file extension for the exported format.
+- Prefix exported filenames with `[SH]` while preserving the original filename.
 
 ## 5. Privacy and Permissions
 
