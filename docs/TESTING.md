@@ -38,7 +38,9 @@
 - [x] JPEG export.
 - [x] PNG selected as the default output format.
 - [x] Correct file extension for each exported format.
-- [ ] JPEG transparency handled with a white background.
+- [x] JPEG transparency replaced with a white background.
+- [x] PNG transparency preserved during export.
+- [x] WebP transparency preserved during export.
 - [x] Original source file remains unchanged.
 - [x] Exported filenames use the `[SH]` prefix and preserve the original filename.
 - [x] Downloads work after replacing images multiple times.
