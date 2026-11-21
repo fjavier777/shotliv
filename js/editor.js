@@ -161,7 +161,7 @@ function downloadImage() {
     const link = document.createElement("a");
 
     link.href = downloadUrl;
-    link.download = `${originalFileName}-enhanced.${extension}`;
+    link.download = `[SH]${originalFileName}.${extension}`;
 
     document.body.appendChild(link);
     link.click();
