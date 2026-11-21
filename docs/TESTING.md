@@ -34,10 +34,10 @@
 ## 4. Image Export
 
 - [x] PNG export.
-- [ ] WebP export.
-- [ ] JPEG export.
-- [ ] PNG selected as the default output format.
-- [ ] Correct file extension for each exported format.
+- [x] WebP export.
+- [x] JPEG export.
+- [x] PNG selected as the default output format.
+- [x] Correct file extension for each exported format.
 - [ ] JPEG transparency handled with a white background.
 - [x] Original source file remains unchanged.
 - [x] Exported filenames use the `[SH]` prefix and preserve the original filename.
