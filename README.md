@@ -2,9 +2,13 @@
 
 **Image enhancement powered by intelligent processing, built in public.**
 
-Shotliv is a project focused on making image enhancement more accessible through a simple, practical experience.
+Shotliv is a lightweight Chrome extension for enhancing images directly in the browser.
 
-The product is being developed with a **Chrome extension first** approach, with the possibility of expanding into a SaaS platform with advanced features as the project evolves.
+Users can adjust brightness, contrast, and saturation, compare the original and enhanced images, and export results in PNG, WebP, or JPEG formats.
+
+All image processing happens locally in the browser. No account, image upload, or cloud processing is required.
+
+The project follows a **Chrome extension first** approach, with the possibility of expanding into a SaaS platform as real user needs are validated.
 
 ## Project direction
 
